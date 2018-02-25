@@ -1,11 +1,3 @@
-multiple definitions with the same name has define in swagger collection: HealthCheckResultDTO
-multiple definitions with the same name has define in swagger collection: FormInstanceDTO
-multiple definitions with the same name has define in swagger collection: StackTraceElement
-multiple definitions with the same name has define in swagger collection: Throwable
-multiple definitions with the same name has define in swagger collection: JsonNode
-multiple definitions with the same name has define in swagger collection: FormsPackageDTO
-multiple definitions with the same name has define in swagger collection: SystemInformationDTO
-multiple routes with the same name and base path has define in swagger collection: undefined/system-information
 {
   "swagger": "2.0",
   "info": {
