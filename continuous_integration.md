@@ -2,18 +2,20 @@
 
 All projects in CWDS follow the same Continuous Integration process:
 
-                                                                    +--------------+
-                                                                    |              |
-                                                                    | Deploy to    |
-                                                      +-----------> | Integration  |
-                                                      |             |              |
-                                                      |             +--------------+
-  +------------+          +------------+       +-------------+
-  |            |          |            |       |             |      +--------------+
-  | Container  |          | Deploy to  |       | PRE-Int     |      | Deploy to    |
-  |   Build    +--------> |  PRE-Int   +-----> | Smoke Tests +----> | Preview      |
-  |            |          |            |       |             |      |              |
-  +------------+          +------------+       +-------------+      +--------------+
+                                                                         +--------------+
+                                                                         |              |
+                                                                         | Deploy to    |
+                                                           +-----------> | Integration  |
+                                                           |             |              |
+                                                           |             +--------------+
+       +------------+          +------------+       +-------------+
+       |            |          |            |       |             |      +--------------+
+       | Container  |          | Deploy to  |       | PRE-Int     |      | Deploy to    |
+       |   Build    +--------> |  PRE-Int   +-----> | Smoke Tests +----> | Preview      |
+       |            |          |            |       |             |      |              |
+       +------------+          +------------+       +-------------+      +--------------+
+
+
 
 ## Container Build
 
