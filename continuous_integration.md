@@ -23,7 +23,9 @@ The initial stage is triggered when the code is merged into `master`.
 After that, the following steps happens on Jenkins:
 
 1- Unit Tests / Lint / and all  are executed
+
 2- A "Bubble" is spun up to recreate all the dependencies of the current application being built. Acceptance tests are executed against the target app.
+
 3- The Docker container is pushed to the registry
 
 ## Deploy to PRE-Int
