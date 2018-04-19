@@ -17,7 +17,7 @@ This wiki is a place for documenting agreements and practices across the various
 ## Development
 [Building new API functional tests](https://github.com/ca-cwds/development-practices/wiki/Building-new-API-functional-tests)
 
-[CWDS Code Branching and Commit Nomenclature](https://github.com/ca-cwds/development-practices/blob/master/continuous_integration.md)
+[CWDS Code Branching and Commit Nomenclature](https://github.com/ca-cwds/development-practices/blob/master/git_branch_and_commits.md)
 
 [CWDS Code Branching Approach](https://github.com/ca-cwds/development-practices/wiki/CWDS-Code-Branching-Approach)
 
