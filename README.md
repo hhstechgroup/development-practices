@@ -10,12 +10,14 @@ This wiki is a place for documenting agreements and practices across the various
 [SonarQube configuration](https://github.com/ca-cwds/development-practices/wiki/SonarQube-configuration)
 
 ## Data management
-[Adding Data to DB2](https://github.com/ca-cwds/development-practices/wiki/Adding-Data-to-DB2<Paste>)
+[Adding Data to DB2](https://github.com/ca-cwds/development-practices/wiki/Adding-Data-to-DB2)
 
 [Upgrading CWS CARES to new DB2 schema version](https://github.com/ca-cwds/development-practices/wiki/Upgrading-CWS-CARES-to-new-DB2-schema-version)
 
 ## Development
 [Building new API functional tests](https://github.com/ca-cwds/development-practices/wiki/Building-new-API-functional-tests)
+
+[CWDS Code Branching and Commit Nomenclature](https://github.com/ca-cwds/development-practices/blob/master/continuous_integration.md)
 
 [CWDS Code Branching Approach](https://github.com/ca-cwds/development-practices/wiki/CWDS-Code-Branching-Approach)
 
