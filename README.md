@@ -9,6 +9,8 @@ This wiki is a place for documenting agreements and practices across the various
 
 [SonarQube configuration](https://github.com/ca-cwds/development-practices/wiki/SonarQube-configuration)
 
+[Health Checks](health_checks.md)
+
 ## Data management
 [Adding Data to DB2](https://github.com/ca-cwds/development-practices/wiki/Adding-Data-to-DB2)
 
