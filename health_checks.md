@@ -3,7 +3,7 @@
 All digital service apps should have a /system-information endpoint which provides the following:
 
 * HTTP Status 200 if system is healthy
-* HTTP Status 465 if any health check fails
+* HTTP Status 465 if any health check fails (This is an unused http code because these are used by our load balancer which determines if a service should be rotated out based on a a non-200 status code.)
 * The body response is defined as JSON in either case and follows this standard:
   * `application` *required*
   * `version` *required*
