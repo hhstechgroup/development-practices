@@ -34,3 +34,19 @@ broken, roll it back.
 3. If you have a large feature that is experimental or unstable, you can hide
 it behind an environment variable so that we can merge it and test it while
 still remaining flexible to roll *other* work out to Staging and beyond.
+
+## Notes from Senior Dev discussion
+
+In discussing with the Senior Dev meeting, several points were raised. These
+should each be investigated.
+
+1. Our current method of managing environment variables is very manual, through
+de-ansible. There may be tools such as Zookeeper which could help with this.
+2. Some teams may not be clear on how to create an environment variable.
+3. Some projects, like Perry, already have a lot of environment variables.
+With more variables comes more complexity, rarely used code branches are
+not usually thoroughly tested, and combinations of variables do not always work
+well together.
+4. We have some privileges, like Hotline-rollout or development-not-in-use,
+that we can also use to guard features. What role (no pun intended) do these
+play in the big picture of feature flagging?
