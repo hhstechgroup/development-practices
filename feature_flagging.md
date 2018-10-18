@@ -50,3 +50,22 @@ well together.
 4. We have some privileges, like Hotline-rollout or development-not-in-use,
 that we can also use to guard features. What role (no pun intended) do these
 play in the big picture of feature flagging?
+
+## Types of Feature Flags
+
+So the canonical Martin Fowler reference is here:
+
+https://martinfowler.com/articles/feature-toggles.html
+
+The author, Pete Hodgson, prefers to refer to them as *feature_toggles*, but
+we've been using feature flags.  Anyway here are the different types described
+in the article:
+
+* Release Toggles - used for trunk based development with feature that aren't ready to deploy yet
+* Experiment Toggles - A/B testing
+* Ops Toggles - something that might impact performance, etc
+* Permissioning Toggles - features that are only turned on for certain users
+
+And just found this as well a whole site dedicated to feature flags:
+
+http://featureflags.io
