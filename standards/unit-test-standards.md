@@ -97,6 +97,12 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 * Keep tests small and fast. Unit tests are fast. Integration tests are slow.
 
 # Test Smells:
-* Test are difficult to write
-* Tests are difficult to manage
-* Tests are difficult to run
+** Test are difficult to write **
+Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Don't new up dependencies in methods. Avoid statics.
+
+** Tests are difficult to maintain **
+Too many overlapping tests. Class under test is doing too much, refactor into smaller classes. To many dependencies, refactor into smaller classes. Lots of setup required, create common fixtures and refactor class under test into smaller classes.
+
+** Tests are difficult to run **
+Tests are fragile. Tests should not rely on other tests or expect data to be availible. Create every thing the test needs prior to test execution.
+
