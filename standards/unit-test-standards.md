@@ -20,8 +20,10 @@ Test Driven Development (TDD) is a subset of Unit Testing. TDD goes beyond just 
 
 TDD is not without criticism and some interesting debates have occurred various public discussions. One main issue is TDD involves a different workflow than most developers are used to. It takes time to get comfortable with it, and many choose not to devote the time. Testing is an art and it is easy to create bad tests and code despite using TDD. TDD doesn't enforce you write good code, but it does make it harder to test when the code violates best practices.
 
-
 # Standards
+The CWDS standard for testing is to have tests for all code. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
+
+Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
 # Maturity Model
 A maturity model is concept used to define and assess a continuum for continuous improvement. A Unit Test Maturity Model breaks down unit tests by test coverage. We could break down unit test by other factors, but currently we will limit them by quantity.
@@ -46,6 +48,8 @@ Level 4 is near 100% code coverage and is the gold standard. TDD by nature provi
 Level 4 not only fully tests the code, provides regression tests, and documents code, it also helps design code. Code tends to be cleaner, clearer, more concise, and cohesive.
 
 # Unit Test
+Unit tests are the standard testing practices. Nearly all code should have tests. And the majority of those tests should be unit tests. Unit tests ideally should be short small tests that test one thing. Each behavior of a class/method is tested separately. Ideally everything that a class/method does is tested.
+
 Unit Test promote the following benefits:
 * Better Design
 * Documentation/Examples
@@ -53,8 +57,24 @@ Unit Test promote the following benefits:
 * Faster Development
 * Faster Debugging
 
-
 # Integration Tests
+Integration tests are used to test multiple code units/modules. This may include two or more different classes in the same codebase, a library component, or an external service or process. The main use case is libraries and external code. Integration tests should be used to test code that is not easily tested with unit tests.
+
+Integration tests are typically less desirable than unit tests due to the speed in which they run. An integration tests typically has to start up some sort of service which takes time. A service SHOULD be restarted between each test but often that is changed to start once per test in order to save time. This approach can lead to unstable tests and is not recommened. Running integration tests may feel quick, but they are relatively much slower and that time adds up and is compounded over time. It's not uncommon for test suites heavy on integration tests to take and hour, while comparble unit test suites can be done in seconds to a few minutes.
+
+Unit tests will either mock a dependent object or use the real one if possible. Integration tests are never mocked. Depending on the language, mocking a library or class you do not have control of is dangerous. If the interface changes, the mock will continue to work and will not advise you of the error. Mocking out library classes should be done with care.
+
+# Test Driven Development (TDD)
+Test Driven Development (TDD) is a technique used to develop code popularized by Kent Beck and is considered a core agile principle. TDD helps the developer create code that is smaller, cleaner, and adhears to best practices. It does this by focusing on code from the user of the code's perspective. Only code that is needed is implemented. Becuase setting up lots of dependencies is painful, classes tend to be smaller.
+
+TDD is a standard CWDS has commited to and developers should strive to reach this standard. However, TDD takes practice and a certain amount of skill. The best way to learn TDD is simply to do it, and if possible, pair with someone experienced with it.
+
+TDD is a very simple concept. Write a test before the code is written. The test MUST fail. Only after the test has failed is the minimal amount of code neccesary to pass the test implemented. The test should pass. Refactor any code and/or test. Repeat. This is very simple but very powerful process. The two key areas are failing test and minimal amount of code. A failed test ensures that the test actually is working appropriatly. Often a test will pass when it should fail and the developer thinks the test is good. Minimal amout of code is also very important as only code that is tested is implemented. The tests force the code to take shape. If it canot be tested, then there is no benifit to that feature.
+
+Code coverage for TDD is near 100% since code can only be implemented if there is a test. However, there are some cases where testing may not be necessary. A typical exception is code that is too simple to test. This typically applies to accessor methods that just return a property value. This does not apply to any code with any logic, even if it is trivial. Occaionally there may be some code that is too difficult to test with unit testing. In these cases either integration or functional tests should be used.
+
+# Unit Test vs TDD
+Unit tests are not the same as TDD. Unit tests are just tests while TDD is a methodology on how to test and write code. TDD typically involves unit tests but can be applied to other types of tests. Unit tests can be written before, during, or after code has been written. Typically if unit tests are a requirement but not TDD, then only partial coverage is acheived. Real TDD ensures near 100% coverage.
 
 # Best Practices
 Unit tests are subject to bad code themselves. Several best practices exist to prevent tests from becoming a drag on development
@@ -80,5 +100,3 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 * Test are difficult to write
 * Tests are difficult to manage
 * Tests are difficult to run
-
-# TDD
