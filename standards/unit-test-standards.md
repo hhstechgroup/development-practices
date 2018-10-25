@@ -1,8 +1,8 @@
-In an effort to help improve software quality...
+This document identifies CWDS Unit Testing standards in an effort to help improve software quality and have common standards across developement teams. The project comprises of several vendors with different testing philosophies and standards which causes confusion among teams that interact. A common testing strategy will help set testing expectations.
 
-Different teams with different expectations...
+CWDS CARES project was initiated with a commitment to Agile and it's practices and the expectation is teams will be implementing such practices. Test Driven Development (TDD) and unit testing is a core development practice associated with agile. As such, CWDS has recognised the importance of unit testing and TDD. This document outlines the CWDS Unit Testing Standards that will adhere to industry best practices and to standardize testing practices.
 
-This document scope is to identify the Unit Testing Standards adopted for the CWDS CARES project. The project comprises of several vendors with different testing philosophies and standards. CWDS CARES project was initiated with a commitment to Agile and it's practices which include Unit Testing and Test Driven Development (TDD). This document will outline the CWDS Standards that will adhere to industry best practices and to standardize testing practices.
+The remaing part of the document will also make clear some definitions and cover some important topics related to unit testing.
 
 # Standards
 The CWDS standard for testing is to have tests for all code. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
@@ -10,7 +10,7 @@ The CWDS standard for testing is to have tests for all code. This includes unit 
 Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
 # Background
-Unit Testing has been an important part of the Agile community since the beginning. Unit testing benefits has expanded beyond just testing that code works. Unit tests can be used to:
+Unit Testing has been an important part of the Agile community since the beginning. Unit testing has benifits beyond just testing code works correctly. Unit tests provides many benefits including:
 * design code
 * documentation
 * working examples
@@ -19,10 +19,6 @@ Unit Testing has been an important part of the Agile community since the beginni
 * debugging
 
 Unit tests are simple tests that test the smallest components of software, often a public method in an class. A true unit test does not try to test dependencies or try to run separate processes in order to test. By following standard unit testing practices, code will have a tendency to be cleaner, clearer, and have less bugs. All code should strive for tests.
-
-Test Driven Development (TDD) is a subset of Unit Testing. TDD goes beyond just testing that code is functional. It's main focus is to improve the quality of code by driving the development of it. TDD is a testing philosophy that starts with the test first followed by the implementation. By following the pattern, only the required code to solve that problem is coded and a test created for all code written.
-
-TDD is not without criticism and some interesting debates have occurred various public discussions. One main issue is TDD involves a different workflow than most developers are used to. It takes time to get comfortable with it, and many choose not to devote the time. Testing is an art and it is easy to create bad tests and code despite using TDD. TDD doesn't enforce you write good code, but it does make it harder to test when the code violates best practices.
 
 # Maturity Model
 A maturity model is concept used to define and assess a continuum for continuous improvement. A Unit Test Maturity Model breaks down unit tests by test coverage. We could break down unit test by other factors, but currently we will limit them by quantity.
@@ -64,11 +60,13 @@ Integration tests are typically less desirable than unit tests due to the speed 
 Unit tests will either mock a dependent object or use the real one if possible. Integration tests are never mocked. Depending on the language, mocking a library or class you do not have control of is dangerous. If the interface changes, the mock will continue to work and will not advise you of the error. Mocking out library classes should be done with care.
 
 # Test Driven Development (TDD)
-Test Driven Development (TDD) is a technique used to develop code popularized by Kent Beck and is considered a core agile principle. TDD helps the developer create code that is smaller, cleaner, and adhears to best practices. It does this by focusing on code from the user of the code's perspective. Only code that is needed is implemented. Becuase setting up lots of dependencies is painful, classes tend to be smaller.
+Test Driven Development (TDD) is a subset of Unit Testing and is often confused with testing. TDD was popularized by Kent Beck and considered a core agile principle. TDD goes beyond just testing that code is functional. TDD helps the developer create code that is smaller, cleaner, and adhears to best practices. Code development is driven by the tests that act as a client of the unit being tested.
 
 TDD is a standard CWDS has commited to and developers should strive to reach this standard. However, TDD takes practice and a certain amount of skill. The best way to learn TDD is simply to do it, and if possible, pair with someone experienced with it.
 
 TDD is a very simple concept. Write a test before the code is written. The test MUST fail. Only after the test has failed is the minimal amount of code neccesary to pass the test implemented. The test should pass. Refactor any code and/or test. Repeat. This is very simple but very powerful process. The two key areas are failing test and minimal amount of code. A failed test ensures that the test actually is working appropriatly. Often a test will pass when it should fail and the developer thinks the test is good. Minimal amout of code is also very important as only code that is tested is implemented. The tests force the code to take shape. If it canot be tested, then there is no benifit to that feature.
+
+TDD is not without criticism and some interesting debates have occurred various public discussions. One main issue is TDD involves a different workflow than most developers are used to. It takes time to get comfortable with it, and many choose not to devote the time. Testing is an art and it is easy to create bad tests and code despite using TDD. TDD doesn't enforce you write good code, but it does make it harder to test when the code violates best practices.
 
 Code coverage for TDD is near 100% since code can only be implemented if there is a test. However, there are some cases where testing may not be necessary. A typical exception is code that is too simple to test. This typically applies to accessor methods that just return a property value. This does not apply to any code with any logic, even if it is trivial. Occaionally there may be some code that is too difficult to test with unit testing. In these cases either integration or functional tests should be used.
 
