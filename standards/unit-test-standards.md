@@ -1,9 +1,13 @@
-# Intent & Goal
 In an effort to help improve software quality...
 
 Different teams with different expectations...
 
 This document scope is to identify the Unit Testing Standards adopted for the CWDS CARES project. The project comprises of several vendors with different testing philosophies and standards. CWDS CARES project was initiated with a commitment to Agile and it's practices which include Unit Testing and Test Driven Development (TDD). This document will outline the CWDS Standards that will adhere to industry best practices and to standardize testing practices.
+
+# Standards
+The CWDS standard for testing is to have tests for all code. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
+
+Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
 # Background
 Unit Testing has been an important part of the Agile community since the beginning. Unit testing benefits has expanded beyond just testing that code works. Unit tests can be used to:
@@ -19,11 +23,6 @@ Unit tests are simple tests that test the smallest components of software, often
 Test Driven Development (TDD) is a subset of Unit Testing. TDD goes beyond just testing that code is functional. It's main focus is to improve the quality of code by driving the development of it. TDD is a testing philosophy that starts with the test first followed by the implementation. By following the pattern, only the required code to solve that problem is coded and a test created for all code written.
 
 TDD is not without criticism and some interesting debates have occurred various public discussions. One main issue is TDD involves a different workflow than most developers are used to. It takes time to get comfortable with it, and many choose not to devote the time. Testing is an art and it is easy to create bad tests and code despite using TDD. TDD doesn't enforce you write good code, but it does make it harder to test when the code violates best practices.
-
-# Standards
-The CWDS standard for testing is to have tests for all code. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
-
-Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
 # Maturity Model
 A maturity model is concept used to define and assess a continuum for continuous improvement. A Unit Test Maturity Model breaks down unit tests by test coverage. We could break down unit test by other factors, but currently we will limit them by quantity.
@@ -97,12 +96,12 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 * Keep tests small and fast. Unit tests are fast. Integration tests are slow.
 
 # Test Smells:
-** Test are difficult to write **
+**Test are difficult to write**
 Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Don't new up dependencies in methods. Avoid statics.
 
-** Tests are difficult to maintain **
+**Tests are difficult to maintain**
 Too many overlapping tests. Class under test is doing too much, refactor into smaller classes. To many dependencies, refactor into smaller classes. Lots of setup required, create common fixtures and refactor class under test into smaller classes.
 
-** Tests are difficult to run **
+**Tests are difficult to run**
 Tests are fragile. Tests should not rely on other tests or expect data to be availible. Create every thing the test needs prior to test execution.
 
