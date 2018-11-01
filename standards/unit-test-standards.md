@@ -3,7 +3,7 @@ This document identifies CWDS Unit Testing standards in an effort to help improv
 CWDS CARES project was initiated with a commitment to agile and it's practices with the expectation that teams will be implementing such practices. Test Driven Development (TDD) and unit testing are core development practices associated with agile. As such, CWDS has recognized the importance of unit testing and TDD and has the expectation teams are implementing agile practice to include unit testing and TDD.
 
 # Standards
-CWDS testing standard is for all code to have be tested. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The majority of tests should be small simple unit tests. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
+CWDS testing standard is for all code to have tests. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The majority of tests should be small simple unit tests. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
 
 Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
@@ -85,7 +85,7 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 * Test name should be clear. Should explain what is being tested and any important information. Example: executeShouldReturnFalseWhenNotSuccessful()
 * Common code should be moved to the setup
 * Setup should create a base successful scenario. Each test then can modify from a happy path scenario.
-* Keep Tests Dry. Think of ways to reuse fixtures. Don't create one fixture per test.
+* Keep Tests DRY(Dont Repeat Yourself) Think of ways to reuse fixtures. Don't create one fixture per test.
 * Follow naming standards.
 * Keep Tests small and focused.
 * Do not rely on test order.
@@ -96,7 +96,7 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 
 # Test Smells:
 **Test are difficult to write**
-Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Don't new up dependencies in methods. Avoid statics.
+Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Avoid creating objects in side of methods. This prevents reuse and makes testing/mocking difficult. Avoid statics for similar reasons..
 
 **Tests are difficult to maintain**
 Too many overlapping tests. Class under test is doing too much, refactor into smaller classes. To many dependencies, refactor into smaller classes. Lots of setup required, create common fixtures and refactor class under test into smaller classes.
