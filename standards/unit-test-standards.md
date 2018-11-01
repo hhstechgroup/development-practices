@@ -42,7 +42,7 @@ Level 4 not only fully tests the code, provides regression tests, and documents 
 
 # Testing
 
-![Testing Pyramid] (https://abstracta.us/wp-content/uploads/2015/10/Screen-Shot-2017-03-27-at-6.21.09-PM-min-1.png)
+![Testing Pyramid](https://abstracta.us/wp-content/uploads/2015/10/Screen-Shot-2017-03-27-at-6.21.09-PM-min-1.png)
 ## Unit Testing
 Unit tests are the standard testing practices. Nearly all code should have tests. And the majority of those tests should be unit tests. Unit tests ideally should be short small tests that test one thing. Each behavior of a class/method is tested separately. Ideally everything that a class/method does is tested.
 
