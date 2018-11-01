@@ -96,7 +96,7 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 
 # Test Smells:
 **Test are difficult to write**
-Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Avoid creating objects in side of methods. This prevents reuse and makes testing/mocking difficult. Avoid statics for similar reasons..
+Keep code small and focused. Keep dependencies to a minimum. Inject dependencies, Avoid creating objects in side of methods. This prevents reuse and makes testing/mocking difficult. Avoid statics for similar reasons.
 
 **Tests are difficult to maintain**
 Too many overlapping tests. Class under test is doing too much, refactor into smaller classes. To many dependencies, refactor into smaller classes. Lots of setup required, create common fixtures and refactor class under test into smaller classes.
