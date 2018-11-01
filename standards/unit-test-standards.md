@@ -81,8 +81,7 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 
 * Do not mock or modify the Class under test for testing purposes.
 * Keep tests as simple as possible
-* Test only one thing per test. Each test should fail for one and only one reason.
-* Only one assertion per test.
+* Test only one thing per test. Each test should fail for one and only one reason. One assertion per test.
 * Listen to the tests. Tests that are painful to run or write are suggesting there is something wrong.
 * Limit setup. Too much setup is suggesting the class under test is doing too much
 * Test name should be clear. Should explain what is being tested and any important information. Example: executeShouldReturnFalseWhenNotSuccessful()
