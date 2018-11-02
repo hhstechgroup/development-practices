@@ -1,7 +1,10 @@
+This document identifies CWDS Testing standards in an effort to help improve software quality and have common standards across development teams. The project comprises of several vendors with different testing philosophies and standards which can cause confusion among teams that interact. A common testing strategy helps set testing expectations among all team members.
 
-## Standards
-## ADA
-## Performance Testing
-## Smoke Test
-## Cross Browser Tests
+# Standards
+#Unit Testing
+# Functional/Acceptance Testing
+# Performance Testing
+# Cross Browser Testing
+# ADA Testing
+# Smoke Testing
 
