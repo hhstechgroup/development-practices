@@ -13,7 +13,17 @@ Developers are responsible for testing there code. All code must be tested and t
 Unit testing tests are the primary testing artifacts for testing code components. It allows for testing all aspects of code. CWDS standards are to write unit tests for all code. Please see the Unit Testing Standards document for more detailed information.
 
 # Functional/Acceptance Testing
+Functional Tests are black box style tests that test the systems specifications or use cases. Acceptance Test determine if requirements are met. Both tests have lots of overlap and will be referred to together.
+
+Front end  web applications will use some sort of a web driven tool such as selenium or capybara to test the web application. These tests typically log in and perform various use case scenario tests. The web app will implicitly test other back end systems via the API.
+
+Back end application will a rest API testing tool to verify the API functions as expected. These tests typically involve logging into the system and executing a request against a single API endpoint.
+
+Not every permutation can be tested. Developers should be focused on writing tests for the application key features. The successful test (Happy Path) and relevant error tests to ensure errors are handled correctly. Creating new features will require new tests. Adding to existing features typically require modifying existing tests.
+
 # Performance Testing
+Performance testing are specialized tests that focus on application performance. Tests These tests are typically not created during development, but during performance activities. Typical performance load tests are usecase based scenarios. Specialized performance tests can be created to test specific characteristics. Performance testing typically involves testing from the Web application layer to gain insight about how the application performs. Targeted testing can be performed against the API services, Authentication servers, Databases, etc. 
+
 # Cross Browser Testing
 # ADA Testing
 # Smoke Testing
