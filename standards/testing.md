@@ -1,7 +1,7 @@
 This document identifies CWDS Testing standards in an effort to help improve software quality and have common standards across development teams. The CWDS project comprises of several vendors with different testing philosophies and standards, which can cause confusion among teams that interact. This document will outline testing expectations among all team members to ensure common coding standards are followed.
 
 # Standard
-It is a CWDS requirement that all code must be tested. Developers are responsible for creating tests while developing code. This includes tests for new code as well as modifying existing tests and creating test for code that was never properly tested. There are no absolute requirements about which tests are required, each story may require a different set of tests. However, most code will require unit tests and functional test. All tests should be created while the code being developed, where possible, a TDD approach is desirable.
+It is a CWDS requirement that all code must be fully tested. Developers are responsible for creating tests while developing code. This includes tests for new code as well as modifying existing tests and creating test for code that was never properly tested. There are no absolute requirements about which tests are required, each story may require a different set of tests. However, most code will require unit tests and functional test. All tests should be created while the code being developed, where possible, a TDD approach is desirable.
 
 Several types of tests exists and should be written for various purposes. Typical development should include unit/integration tests along with Acceptance/Functional tests. Any UI work would include ADA testing. Load and Performance testing and smoke testing are special cases. Special efforts will add tests to these testing suites.
 
@@ -12,7 +12,7 @@ Several types of tests exists and should be written for various purposes. Typica
 * **Smoke Tests** Developers are required to have a suite of smoke tests to verify the application is functional.the tests will perform various tests and report the outcome in a way that can be automated and monitored. Test must be able to run in production, which would prevent any writing to the DB.
 * **Load and Performance Tests** Load and Performance tests are created during performance testing efforts rather than at normal code development time. Performance Tests may focus on specific scenarios depending on what is being tested. Load Tests should mirror Functional and Acceptance tests as well as any other cases identified.
 
-#Unit/Integration Testing
+# Unit/Integration Testing
 Unit and Integration testing tests are the primary method of testing code components. Unit Tests focuses on the smallest testable components of code and allows for extensive testing of all code paths. CWDS standards are to write unit tests for all code. Please see the Unit Testing Standards document for more detailed information.
 
 # Functional/Acceptance Testing
