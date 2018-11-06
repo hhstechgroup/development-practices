@@ -24,16 +24,16 @@ Back end applications will use an automated REST API testing tool to verify the 
 
 Testing every code base permutation with Functional and Acceptance test is impractical. Instead, developers should focus on writing tests for application features success paths and key error scenarios. Not all errors can be tested, but a reasonable amount of error testing should be tested. New features will require new tests while updating existing code requires modifying existing tests. It is the developers responsibility to keep all tests up to date and ensure all tests exists.
 
-# Load and Performance Testing
-Load and Performance testing are specialized tests that focus on application performance. These tests are typically created during performance activities rather than during feature development. Typical Load Tests are use case based scenarios that will relate to Functional and Acceptance tests. Specialized Performance Tests can be created to test and monitor specific characteristics such as how the system handles load and what the response times are. Load testing typically involves testing the Web Application layer to gain insight about how the application as a unit performs. Besides testing the application holistically, subsystems can be targeted for measuring performance. Testing can be performed against the API services, Authentication servers, Databases, etc.
-
-# ADA Testing
-Americans with Disabilities Act (ADA) is a specialty test to ensure the web application is accessibility compliant. Many tests are manually checked. The goal is to automate as much as possible based on availability of tools.
-
 # Cross Browser Testing
 Tests that run in the browser must be tested across the CWDS supported browsers the best they can.
  Some features may not be equally testable in all browsers.
 Test should target current versions of Microsoft's Edge and IE browsers, Chrome, and Firefox.
 
+# ADA Testing
+Americans with Disabilities Act (ADA) is a specialty test to ensure the web application is accessibility compliant. Many tests are manually checked. The goal is to automate as much as possible based on availability of tools.
+
 # Smoke Testing Smoke
 Smoke Tests verify an application is working correctly by checking a limited set of key functional areas. Smoke Tests are often performed after a deployment to ensure application was deployed and restarted or periodically as part of a health check. Tests should be limited in scope rather than a full suite of tests. Tests may include existing functional or acceptance test or other tests. Smoke Tests should provide a pass fail response so test can be automated and appropriate actions can be taken when a test fails. Smoke Tests may be required to run in Production Environment, which limits the ability to write to a database.
+
+# Load and Performance Testing
+Load and Performance testing are specialized tests that focus on application performance. These tests are typically created during performance activities rather than during feature development. Typical Load Tests are use case based scenarios that will relate to Functional and Acceptance tests. Specialized Performance Tests can be created to test and monitor specific characteristics such as how the system handles load and what the response times are. Load testing typically involves testing the Web Application layer to gain insight about how the application as a unit performs. Besides testing the application holistically, subsystems can be targeted for measuring performance. Testing can be performed against the API services, Authentication servers, Databases, etc.
