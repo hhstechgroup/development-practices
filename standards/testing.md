@@ -7,7 +7,7 @@ Developers are responsible for testing there code. All code must be tested and t
 * **Functional/Acceptance Tests** All Major functionality should include Functional/Acceptance tests. Tests should include normal execution paths and some error handling. Not all code paths can or will be tested. Focus is testing the app from an external black box perspective focusing on external behavior.
 * **Cross Browser Tests** When creating Functional and Acceptance tests, all major supported browsers should be targeted. This includes current versions of IE, Chrome, and Firefox.
 * **ADA Tests** ADA tests include manual and automated tests. Developers should check for ADA issues manually prior to completing story. Any tests that can be automated should be,
-* **Smoke Tests** Smoke Tests verify key areas of an application is working correctly. Smoke Tests are often performed after a deployment. Tests should be limited tests which may include functional or acceptance test or other tests to check functionality. Care must be taken to ensure tests can run in any environment, including production. Make database changes typically is not advisable.
+* **Smoke Tests** Developers are required to have a suite of smoke tests to verify the application is functional.the tests will perform various tests and report the outcome in a way that can be automated and monitored. Test must be able to run in production, which would prevent any writing to the DB.
 * **Load and Performance Tests** Load and Performance tests are created during performance testing rather than at code development time. Performance Tests may focus on specific scenarios depending on what is being tested. Load Tests should mirror Functional and Acceptance tests as well as any other cases identified.
 
 #Unit/Integration Testing
@@ -33,5 +33,6 @@ Tests that run in the browser must be tested across the CWDS supported browsers 
  Some features may not be equally testable in all browsers.
 Test should target current versions of Microsoft's Edge and IE browsers, Chrome, and Firefox.
 
-# Smoke Testing
+# Smoke Testing Smoke
+Smoke Tests verify the application is working correctly by checking key functional areas of the app. Smoke Tests are often performed after a deployment to ensure application was deployed and restarted. Tests should be limited tests which may include functional or acceptance test or other tests to check functionality. Care must be taken to ensure tests can run in any environment, including production. Make database changes typically is not advisable since making changes in production DB is not allowed..
 
