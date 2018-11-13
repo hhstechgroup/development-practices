@@ -8,7 +8,7 @@ Several types of tests exists and should be written for various purposes. Typica
 * **Unit Tests**: All Code should have Unit Test and have nearly 100% code coverage. Adhering to TDD practice ensures this requirement is met. Integration Tests are a special form of unit tests and should be used similarly. Integration tests take longer and require more resources and should be used sparingly. Prefer unit tests over integration style tests where possible.
 * **Functional/Acceptance Tests** All Major functionality should include Functional/Acceptance tests. Tests should include normal execution paths and some error handling. Not all code paths can or will be tested. The focus for Functional and Acceptance Tests are to test the app from an external black box perspective focusing on external behavior.
 * **Cross Browser Tests** When creating Functional and Acceptance tests, all major supported browsers should be targeted. This includes current versions of IE, Chrome, and Firefox. Check with current standards for details.
-* **ADA Tests** ADA tests include manual and automated tests. Developers should check for ADA issues manually prior to completing story. Any tests that can be automated should be,
+* **ADA Tests** ADA tests include manual and automated tests. Developers should check for ADA issues manually prior to completing story. Any tests that can be automated should be implemented.
 * **Smoke Tests** Developers are required to have a suite of smoke tests to verify the application is functional.the tests will perform various tests and report the outcome in a way that can be automated and monitored. Test must be able to run in production, which would prevent any writing to the DB.
 * **Load and Performance Tests** Load and Performance tests are created during performance testing efforts rather than at normal code development time. Performance Tests may focus on specific scenarios depending on what is being tested. Load Tests should mirror Functional and Acceptance tests as well as any other cases identified.
 
@@ -31,6 +31,12 @@ Test should target current versions of Microsoft's Edge and IE browsers, Chrome,
 
 # ADA Testing
 Americans with Disabilities Act (ADA) is a specialty test to ensure the web application is accessibility compliant. Many tests are manually checked. The goal is to automate as much as possible based on availability of tools.
+
+As for the tools that we should use for testing against accessiblity and more on how to be complaint with these rules can be accessed [here](https://github.com/ca-cwds/research-design/wiki/Accessible-Design)
+Tests based on the following checklists would help dev's to be more ADA compliant.
+* [JSX checklist from The A11Y Project](https://a11yproject.com/checklist.html)
+* [WCAG checklist from WebAIM](https://webaim.org/standards/wcag/checklist)
+
 
 # Smoke Testing Smoke
 Smoke Tests verify an application is working correctly by checking a limited set of key functional areas. Smoke Tests are often performed after a deployment to ensure application was deployed and restarted or periodically as part of a health check. Tests should be limited in scope rather than a full suite of tests. Tests may include existing functional or acceptance test or other tests. Smoke Tests should provide a pass fail response so test can be automated and appropriate actions can be taken when a test fails. Smoke Tests may be required to run in Production Environment, which limits the ability to write to a database.
