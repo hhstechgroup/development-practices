@@ -5,7 +5,7 @@ It is a CWDS requirement that all code must be fully tested. Developers are resp
 
 Several types of tests exists and should be written for various purposes. Typical development should include unit/integration tests along with Acceptance/Functional tests. Any UI work would include ADA testing. Load and Performance testing and smoke testing are special cases. Special efforts will add tests to these testing suites.
 
-* **Unit Tests**: All Code should have Unit Test and have nearly 100% code coverage. Adhering to TDD practice ensures this requirement is met. Integration Tests are a special form of unit tests and should be used similarly. Integration tests take longer and require more resources and should be used sparingly. Prefer unit tests over integration style tests where possible.
+* **Unit Tests** All Code should have Unit Test and have nearly 100% code coverage. Adhering to TDD practice ensures this requirement is met. Integration Tests are a special form of unit tests and should be used similarly. Integration tests take longer and require more resources and should be used sparingly. Prefer unit tests over integration style tests where possible.
 * **Functional/Acceptance Tests** All Major functionality should include Functional/Acceptance tests. Tests should include normal execution paths and some error handling. Not all code paths can or will be tested. The focus for Functional and Acceptance Tests are to test the app from an external black box perspective focusing on external behavior.
 * **Cross Browser Tests** When creating Functional and Acceptance tests, all major supported browsers should be targeted. This includes current versions of IE, Chrome, and Firefox. Check with current standards for details.
 * **ADA Tests** ADA tests include manual and automated tests. Developers should check for ADA issues manually prior to completing story. Any tests that can be automated should be implemented.
@@ -32,10 +32,11 @@ Test should target current versions of Microsoft's Edge and IE browsers, Chrome,
 # ADA Testing
 Americans with Disabilities Act (ADA) is a specialty test to ensure the web application is accessibility compliant. Many tests are manually checked. The goal is to automate as much as possible based on availability of tools.
 
-As for the tools that we should use for testing against accessiblity and more on how to be complaint with these rules can be accessed [here](https://github.com/ca-cwds/research-design/wiki/Accessible-Design)
-Tests based on the following checklists would help dev's to be more ADA compliant.
-* [JSX checklist from The A11Y Project](https://a11yproject.com/checklist.html)
+As for the tools that we should use for testing against accessiblity and more on accessibility standards for CWDS-CARES can be accessed [here](https://github.com/ca-cwds/research-design/wiki/Accessible-Design).
+
+Tests based on the following checklists would help dev's to be more ADA compliant:
 * [WCAG checklist from WebAIM](https://webaim.org/standards/wcag/checklist)
+* [JSX checklist from The A11Y Project](https://a11yproject.com/checklist.html)
 
 
 # Smoke Testing Smoke
