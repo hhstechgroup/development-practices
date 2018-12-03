@@ -39,7 +39,7 @@ Tests based on the following checklists would help dev's to be more ADA complian
 * [JSX checklist from The A11Y Project](https://a11yproject.com/checklist.html)
 
 
-# Smoke Testing Smoke
+# Smoke Testing
 Smoke Tests verify an application is working correctly by checking a limited set of key functional areas. Smoke Tests are often performed after a deployment to ensure application was deployed and restarted or periodically as part of a health check. Tests should be limited in scope rather than a full suite of tests. Tests may include existing functional or acceptance test or other tests. Smoke Tests should provide a pass fail response so test can be automated and appropriate actions can be taken when a test fails. Smoke Tests may be required to run in Production Environment, which limits the ability to write to a database.
 
 # Load and Performance Testing
