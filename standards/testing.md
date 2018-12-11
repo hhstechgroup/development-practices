@@ -12,6 +12,14 @@ Several types of tests exists and should be written for various purposes. Typica
 * **Smoke Tests** Developers are required to have a suite of smoke tests to verify the application is functional.the tests will perform various tests and report the outcome in a way that can be automated and monitored. Test must be able to run in production, which would prevent any writing to the DB.
 * **Load and Performance Tests** Load and Performance tests are created during performance testing efforts rather than at normal code development time. Performance Tests may focus on specific scenarios depending on what is being tested. Load Tests should mirror Functional and Acceptance tests as well as any other cases identified.
 
+# Testing Pattern
+The following are basic scenarios that should typically be tested for. Not all scenarios will apply but should be evaluated.
+* **Test the Happy Path** Test the main path of the code being tested. This is the expected behavior.
+* **Test the Alternative Paths** Test alternative code paths to ensure all main code paths are covered.
+* **Test the Error Path** Test Error paths. Ensure error handling is properly implemented.
+* **Test Data Permutations** Test for different data permutations. Test for fence post errors, empty values, nulls, etc.
+* **Test for Defects** Test defects when they are found. A defect should never occur again when tested.
+
 # Unit/Integration Testing
 Unit and Integration testing tests are the primary method of testing code components. Unit Tests focuses on the smallest testable components of code and allows for extensive testing of all code paths. CWDS standards are to write unit tests for all code. Please see the Unit Testing Standards document for more detailed information.
 
