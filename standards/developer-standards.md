@@ -87,6 +87,7 @@ Linting tools and IDE's plugins should be used to enforce rules.
 
 ## Code
 > Getting software to work is only half of the job. -- Robert Martin
+
 > Make it work. Make it right. Make it fast. Kent Beck
 
 In addition to style guides and team agreements relating to code, developers should follow best practices, principles, and processes where appropriate. Developers should continually refactor code to make it better.
