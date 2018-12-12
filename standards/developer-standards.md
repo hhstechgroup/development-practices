@@ -86,11 +86,16 @@ Developers are expected to follow the appropriate coding standards, conventions,
 Linting tools and IDE's plugins should be used to enforce rules.
 
 ## Code
+> Getting software to work is only half of the job. -- Robert Martin
+> Make it work. Make it right. Make it fast. Kent Beck
+
 In addition to style guides and team agreements relating to code, developers should follow best practices, principles, and processes where appropriate. Developers should continually refactor code to make it better.
 
 Code isn't complete when coding is finished. The developer needs to ensure the code is structured appropriately. Development cycle should contain refactoring sessions to reorganize the code into appropriate modules and components. These modules should make logical sense and fit the model of the application.
 
 Developers should focus on simple well decomposed methods/functions that solve the problem at hand. Solving for future requirements and over engineering should be avoided.
+
+Code should follow standard error handling practices. Defensive programming is expected. Make reasonable checks against the data and not assume anything. Unit Tests allow for exhaustive test cases. Appropriate errors should be handled and reported back to the caller. Error message should be clear and concise and explain what the error was to the level appropriate to the calling party. It is not appropriate to display a SQL exception to the the User.
 
 The following compiled list of phrases describe what good code should be. Developers should be developing with these ideas in there mind.
   * Elegant, efficient, and focused code.
@@ -120,6 +125,13 @@ Test should be written when bugs are found. These tests guard against the bug re
 
 Other tests maybe required for special cases such as smoke tests, performance tests, and any other special tests.
 
+## Committing Code
+All code is expected to be deployable at all times. Conditions may arise where a hot patch must be deployed. Developers are expected to ensure the build is stable and the code committed is either able to run as expected in production or is prevented from running.
+
+Stories should be small and ideally code commits should also be small. Large commits are difficult to review and can hide lots of coding issues. This means favoring smaller commits and integrating code sooner.
+
+Commit messages should be explicit about what the commit is. Commit messages should let the reviewer know exactly the purpose of the commits. Multiple commits should Rarely have the same descriptions and should refrain from vague titles like, 'initial check in' or 'fixed bug'. Commits should contain a story number and a brief description. A developer should be able to look through the logs and get a sense of what work was done.
+
 ## Code Review
 All code artifacts are expected to be reviewed by team members. Code reviews offer the ability to review the coding style, adherence to standards, review any architectural decisions, and to find bugs. Code Reviews often acts as a second set of eyes.
 
@@ -147,13 +159,6 @@ API endpoints are considered public and should receive special care during their
 
 Digital Service Applications are considered to be part of shareable resources. It is often difficult to predict which resources will be of use for future clients. By providing generic interfaces to the application we can ensure any client can integrate with out applications. APIs should be generic, clear, documented, and easy to interact with. Endpoints should default to providing all data necessary to create and interact with resources rather than convince shortcuts. This would allow external clients to use the interface with out having to have special knowledge.
 
-## Committing Code
-All code is expected to be deployable at all times. Conditions may arise where a hot patch must be deployed. Developers are expected to ensure the build is stable and the code committed is either able to run as expected in production or is prevented from running.
-
-Stories should be small and ideally code commits should also be small. Large commits are difficult to review and can hide lots of coding issues. This means favoring smaller commits and integrating code sooner.
-
-Commit messages should be explicit about what the commit is. Commit messages should let the reviewer know exactly the purpose of the commits. Multiple commits should Rarely have the same descriptions and should refrain from vague titles like, 'initial check in' or 'fixed bug'. Commits should contain a story number and a brief description. A developer should be able to look through the logs and get a sense of what work was done.
-
 ## Documentation
 Code should include documentation that outlines system architecture, major system components, important concepts, technologies, and algorithms. Documentation should be clear and concise. Github wiki provides a great place to keep documentation. Documentation living outside the repository should have a link pointing to it from the repo.
 
@@ -177,6 +182,11 @@ Applications logs should include a traceable ID, date times, message, and other 
 ## Feature Flags
 Feature Flags guard blocks of code from being unintentionally executed and should be used to controls access to features not yet ready for use. Feature Flags also allow for some code to be rolled out to customers or to temporarily turn off access to the code. Code should always be modularized to allow features flags to be inserted. This may adjust how the code is designed.
 
+## PII and other security concerns
+Care should be taken whenever PII is encountered. Steps need to be taken to guard the data appropriately. PII should not be dumped to a log file or otherwise in appropriately captured. Raise concerns as appropriate when working on stories where PII exists.
+
+Credentials should be guarded closely. Credentials should not be logged or stored in public repositories. Deleting credentials after they have been committed can still be retrieved. Special steps MUST be taken to remove credentials from repositories.
+
 ## Basic Developer habits
 The following are habits that developers should be adhering to while developing code. The following habits help to raise the code quality by making the code more readable, understandable, simpler, and less error prone.
   * Intention revealing and descriptive names. Names should be clearly named so they reveal what they refer to. Terse, short abbreviations, or non standard names should be avoided.
@@ -197,19 +207,7 @@ The following are habits that developers should be adhering to while developing 
 
 
 
-
-bugs and test
-defensive programming
-pii
-failing builds
-testing
-code quality
-pull requests
 pair programming mentoring, point out mistakes
-code/peer review
 estimating
 refactoring and continuous improvements
-collective owner ship
-Getting software to work is only half of the job. -- Robert Martin
 team standards
-Make it work. Make it right. Make it fast. Kent beck
