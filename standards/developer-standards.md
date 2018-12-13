@@ -88,7 +88,7 @@ Linting tools and IDE's plugins should be used to enforce rules.
 ## Code
 > Getting software to work is only half of the job. -- Robert Martin
 
-> Make it work. Make it right. Make it fast. Kent Beck
+> Make it work. Make it right. Make it fast. -- Kent Beck
 
 In addition to style guides and team agreements relating to code, developers should follow best practices, principles, and processes where appropriate. Developers should continually refactor code to make it better.
 
@@ -205,10 +205,3 @@ The following are habits that developers should be adhering to while developing 
   * Commented out code. Commented out code is not desirable. Please refrain from commenting that code out. Too often dead uncommented code is left in place and no one knows what to do with it and are afraid to remove it. If it is not being used, remove it. The repository will keep a record of it if it is needed at a later date.
   * Minimize the use of TODOs. Few people have the time to go back and fix the TODOs. They typically live on forever in the code. Make the code the way it is supposed to be the first time. and no one knows what to do with it and are afraid to remove it. If it is not being used, remove it. The repository will keep a record of it if it is needed at a later date.
   * Keep Browser Console clean. Ensure warning and errors are not being reported in the browser console. The console reports errors which should be handled and are unprofessional.
-
-
-
-pair programming mentoring, point out mistakes
-estimating
-refactoring and continuous improvements
-team standards
