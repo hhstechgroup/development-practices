@@ -3,7 +3,7 @@ This document identifies CWDS Unit Testing standards in an effort to help improv
 CWDS CARES project was initiated with a commitment to agile and it's practices with the expectation that teams will be implementing such practices. Test Driven Development (TDD) and unit testing are core development practices associated with agile. As such, CWDS has recognized the importance of unit testing and TDD and has the expectation teams are implementing agile practice to include unit testing and TDD.
 
 # Standards
-CWDS testing standard is for all code to have tests. This includes unit and functional tests. Unit tests include integration tests and functional tests includes acceptance test. The majority of tests should be small simple unit tests. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
+CWDS testing standard is for all code to have tests. Integration tests are a component of unit test that focus on testing external services, libraries, or other code not owned by the team. The majority of tests should be small simple unit tests. Acceptance tests may also be included as part of unit test. The desire is for developers to be doing TDD, but since that requires some learning and discipline, that is a labeled a goal that should be strive for.
 
 Nearly all code should be tested. This should be close to 100% coverage which includes all paths through the code. Changes to the code should cause some test to break. Typically the only code not tested is code that returns or sets a property
 
