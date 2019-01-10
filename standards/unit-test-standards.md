@@ -36,12 +36,14 @@ Level 2 has 80% code coverage and is the low bar for CWDS CARES. Having 80% code
 Level 3 has near 100% code coverage. In actuality, this is a bit difficult to achieve and is an ideal. There is some code that often is too trivial to test, such as getters and setters and which maybe left out of the metrics for simplicity. Having near 100% test coverage ensures that the code has been tested and protects against introduction of errors when modifying behavior or refactoring code. It also provides documentation on how code is expected to work by providing working examples. However, level 3 does not ensure tests are of quality and code is thoroughly tested.
 
 ## Level 4: TDD
-Level 4 is near 100% code coverage and is the gold standard. TDD by nature provides full test coverage. The major difference in level 3 and 4 is the method of testing. TDD is a technique that impacts the design of code, which should result in code that follows best practices and has fewer errors. TDD requires a failing test to be created first, followed by enough code to pass the test. Some refactoring occurs and the process is repeated. The idea is use tests to drive the functionality of the class. The Test is the client of the class being created and the behavior of the class is determined based on the test interactions.
+Level 4 is near 100% code coverage and is the gold standard. TDD by nature provides full test coverage. The major difference in level 3 and 4 is the method of testing. TDD is a technique that impacts the design of code, which should result in code that follows best practices and has fewer errors. TDD requires a failing test to be created first, followed by enough code to pass the test. Some refactoring occurs and the process is repeated. The idea is use tests to drive the functionality of the class. The Test is the client of the class being created and the behavior of the class is determined based on the test interactions. No line of production code can be written before it has a failing test.
 
 Level 4 not only fully tests the code, provides regression tests, and documents code, it also helps design code. Code tends to be cleaner, clearer, more concise, and cohesive.
 
 # Testing
-## Unit Test
+
+![Testing Pyramid](https://abstracta.us/wp-content/uploads/2015/10/Screen-Shot-2017-03-27-at-6.21.09-PM-min-1.png)
+## Unit Testing
 Unit tests are the standard testing practices. Nearly all code should have tests. And the majority of those tests should be unit tests. Unit tests ideally should be short small tests that test one thing. Each behavior of a class/method is tested separately. Ideally everything that a class/method does is tested.
 
 Unit Test promote the following benefits:
@@ -61,7 +63,7 @@ Integration tests are typically less desirable than unit tests due to the speed 
 Unit tests will either mock a dependent object or use the real one if possible. Integration tests are never mocked. Depending on the language, mocking a library or class you do not have control of is dangerous. If the interface changes, the mock will continue to work and will not advise you of the error. Mocking out library classes should be done with care.
 
 ## Test Driven Development (TDD)
-Test Driven Development (TDD) is a subset of Unit Testing and is often confused with testing. TDD was popularized by Kent Beck and considered a core agile principle. TDD goes beyond just testing code is functional. TDD helps the developer create code that is smaller, cleaner, and adheres to best practices. Code development is driven by the tests that act as a client of the unit being tested.
+Test Driven Development (TDD) is a subset of Unit Testing and is often confused with testing. TDD was popularized by Kent Beck and considered a core agile practice. TDD goes beyond just testing code is functional. TDD helps the developer create code that is smaller, cleaner, and adheres to best practices. Code development is driven by the tests that act as a client of the unit being tested.
 
 TDD is a standard CWDS has committed to and developers should strive to reach this standard. However, TDD takes practice and a certain amount of skill which improves over time. The best way to learn TDD is simply to do it, and if possible, pair with someone experienced with it.
 
@@ -79,7 +81,7 @@ Unit tests are subject to bad code themselves. Several best practices exist to p
 
 * Do not mock or modify the Class under test for testing purposes.
 * Keep tests as simple as possible
-* Test only one thing per test. Each test should fail for one and only one reason.
+* Test only one thing per test. Each test should fail for one and only one reason. One assertion per test.
 * Listen to the tests. Tests that are painful to run or write are suggesting there is something wrong.
 * Limit setup. Too much setup is suggesting the class under test is doing too much
 * Test name should be clear. Should explain what is being tested and any important information. Example: executeShouldReturnFalseWhenNotSuccessful()
