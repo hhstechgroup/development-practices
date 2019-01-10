@@ -1,6 +1,6 @@
 This documents outlines CWDS Developer Standards and expectations along with basic guidance. The intent is to define developer responsibilities and create a standard set of procedures among all the development groups in an effort to increase code quality and promote a common set of values among teams/vendors. Each developer can then explicitly understand was is expected and can contribute positively to the project.
 
-Agile has long history of practices and core beliefs that impact the quality of code. Tee following responsibilities, standards, and practices in this document are fairly common and are typically the expectation in high functioning teams. Like all agile practices measurement and review are import to ensure practices are relevant and contribute to delivering quality code.
+Agile has long history of practices and core beliefs that impact the quality of code. The following responsibilities, standards, and practices in this document are fairly common and are typically the expectation in high functioning teams. Like all agile practices measurement and review are import to ensure practices are relevant and contribute to delivering quality code.
 
 # Ethics
 Developing well crafted software requires more than understanding a languages syntax and semantics. Agile practices and various best practices offer techniques and guidance on programming techniques, principles, patterns, etc. In addition, Robert Martin has created a Programmers Oath to help bind programmers together as a profession. The Programmer's Oath is a set of statements that affirm the Programmer's attention to the key qualities that make agile development powerful. This Oath describes an ethic that can when followed will help drive code quality. The following is a list he created in 2015.
@@ -42,7 +42,7 @@ Developers have a responsibility to ensure the stories they work on are in the p
 * The Acceptance Criteria is present, clear, and achievable.
 * There is no Ambiguity.
 * Any requirements missing or to be determined at a later date should be avoided.
-Accepting stories without clear requirements causes code to be incorrectly implemented, wastes developer time, and/or creates incorrect behavior in the system.
+Accepting stories without clear requirements causes code to be incorrectly implemented, wastes developer time, and/or creates incorrect behavior in the system.  Note in many cases a story will not spell out every possible detail such as exact visual design, and that this is OK, and can be easily resolved through converstations with POs, users, and designers.
 
 ## Testing
 Developers have a responsibility for testing their code. Several layers of tests should be implemented to insure full testing. Unit testing provides the simplest, flexible, and most effective testing and is the default. Developers also must create Functional and Acceptance tests to ensure the entire system works as expected.
@@ -104,6 +104,7 @@ The following compiled list of phrases describe what good code should be. Develo
   * Should be hard for bugs to hide.
   * Minimize dependencies.
   * Code should reveal developers intent not obscure it.
+  * Practice YAGNI. Don't design for an unknown future state.
   * Readable by other developers regardless of skill level.
   * Consistent ways of doing things.
   * Follow existing patterns, else refactor.
@@ -131,7 +132,7 @@ All code is expected to be deployable at all times. Conditions may arise where a
 
 Stories should be small and ideally code commits should also be small. Large commits are difficult to review and can hide lots of coding issues. This means favoring smaller commits and integrating code sooner.
 
-Commit messages should be explicit about what the commit is. Commit messages should let the reviewer know exactly the purpose of the commits. Multiple commits should Rarely have the same descriptions and should refrain from vague titles like, 'initial check in' or 'fixed bug'. Commits should contain a story number and a brief description. A developer should be able to look through the logs and get a sense of what work was done.
+Commit messages should be explicit about what the commit is. Commit messages should let the reviewer know exactly the purpose of the commits. Multiple commits should Rarely have the same descriptions and should refrain from vague titles like, 'initial check in' or 'fixed bug'. Commits should contain a story number and a brief description. A developer should be able to look through the logs and get a sense of what work was done. A good overview of current good practices for Git commit messages can be found (here)[https://code.likeagirl.io/useful-tips-for-writing-better-git-commit-messages-808770609503].
 
 ## Code Review
 All code artifacts are expected to be reviewed by team members. Code reviews offer the ability to review the coding style, adherence to standards, review any architectural decisions, and to find bugs. Code Reviews often acts as a second set of eyes.
@@ -142,14 +143,18 @@ Reviewees should seek honest reviews and are responsible for implementing reques
 
 Pull Requests should be a size that is easily reviewable. Code that is too large cannot be reviewed in a timely manner. The developer should not make changes once a request has been made. Requests should include appropriate documentation to describe what the request is doing. The pull request should be filled out appropriately and provide an adequate description and link to the story for which it is derived from.
 
+Remember that a code review is a converstation.  If a potential issue is hard to describe within a code review the item can often be discussed in person where understanding is greatly enhanced.
+
 Any developer has the right to reject a pull request if it fails to meet standards, has flaws, or other reasons that make it not ready for deployment. If a pull request is rejected, other developers should honor those reasons. In cases of dispute or in high priority cases, developers should mediate the process. This should be a meeting to assess the issue and how to best remediate them rather than a way to push past a difficult situation.
 
 Some questions to ask durring a pull request:
   * Are they violating best practices or idioms?
+  * Was the code developed using TDD?
   * Are there any security issues?
   * Could the code be refactored?
   * Is the code readable?
   * Are there tests?
+  * Do the tests actually verify the behavior?
   * Are things named appropriately?
   * Are the right abstractions made?
   * Is code cohesive and loosely coupled?
