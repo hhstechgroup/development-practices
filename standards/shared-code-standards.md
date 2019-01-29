@@ -21,5 +21,6 @@ Code changes should be performed with care since the code is shared. Shared code
 Contracts should not change once code is available to the clients. Only algorithm improvements, refactoring, or side effects NOT visible to the client such as logging  should be performed. In the cases where there is a problem with the contract, then great care should be taken to handle the situation. Preferably, the code should be deprecated and replaced. In the event a breaking change is made, then the clients must be notified.
 
 # Testing
+All code should contain tests. Shared code should include tests that verify functionality and enforce the contract. Updates should not break any existing tests that focus on contracts since that would break clients that depends on that contract. The implementing code may choose to add tests or to mock out the shared code to verify the contract doesn't change during an update.
 
-All code should contain tests. Shared code should include tests that verify functionality and enforce the contract. Updates should not break existing contract tests since that would break clients. The implementing code may choose to add additional tests or to mock out the shared code. Shared code test should not only test functionality, but should also demonstrate code usage. Tests are great for showing examples of using the code.
+Shared code test should not only test functionality, but should also demonstrate code usage. Tests are great for showing examples of using the code.
