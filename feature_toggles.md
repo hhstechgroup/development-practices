@@ -1,5 +1,21 @@
 # Feature Toggles
 
+## Summary (with update from 2/9/19 Sr. Dev team meeting)
+
+There is agreement on the tools and approach described below for feature flagging 
+(in particular the ideas below around release toggles, and permissioning toggles using Cognito attributes) 
+What we did not agree on is how frequent releases will have to happen.
+
+In summary, we agreed on the tools for how to do feature flagging. 
+Further we discussed using the staging environment as our production environment: 
+All teams can build to release to staging, and not be (as) concerned when code is released to production.
+
+This approach implies the following for future development at CWDS:
++ By default features are not built with feature flags
++ Features identified early in a release cycle that need to be flagged can have them planned and built in as part of the release
++ Features identified late in a release cycle that need to have toggles can be retrofitted.  
++ If this approach proves problematic, we can revise it.
+
 ## Background
 
 > Feature Toggles (often also refered to as Feature Flags) are a powerful technique, allowing teams to modify system behavior without changing code. They fall into various usage categories, and it's important to take that categorization into account when implementing and managing toggles. Toggles introduce complexity. We can keep that complexity in check by using smart toggle implementation practices and appropriate tools to manage our toggle configuration, but we should also aim to constrain the number of toggles in our system.
@@ -27,7 +43,8 @@ This may sound like an Ops Toggle, but it is actually more of a Release Toggle. 
 
 ## Release Toggles
 
-The most common type of feature toggle we expect to see is a Release Toggle, which is a short-lived, statically configured toggle that maintains the ability to merge unfinished code or features into the main Git trunk without blocking Continuous Delivery.
+The most common type of feature toggle we expect to see is a Release Toggle, which is a short-lived, 
+statically configured toggle that maintains the ability to merge unfinished code or features into the main Git trunk without blocking Continuous Delivery.
 
 ### When to Use a Release Toggle
 
@@ -52,7 +69,7 @@ Permissioning Toggles control who can see which feature, typically at a user-by-
 
 ### How to create a Permissioning Toggle
 
-The current approach to configuring a Permissioning Toggle is to create a privilege in Cognito, which the application will receive from Perry. There are a handful of existing 'umbrella' privileges, such as `development-not-in-use` or `Hotline-rollout` that may encompass multiple features. Consider whether or not your permissioning toggle should be controlled separately from or together with an existing toggle.
+The current approach to configuring a Permissioning Toggle is to create a privilege in the Cognito IdAM, which the application will receive from Perry. There are a handful of existing 'umbrella' privileges, such as `development-not-in-use` or `Hotline-rollout` that may encompass multiple features. Consider whether or not your permissioning toggle should be controlled separately from or together with an existing toggle.
 
 ## Implementation Guidelines
 
