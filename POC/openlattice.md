@@ -23,11 +23,11 @@
 
 **Code age:** around 1 year
 
-**Demo:** [https://openlattice.com/agora/#/login](https://openlattice.com/agora/#/login)
+**Demo:** [https://openlattice.com/agora](https://openlattice.com/agora/#/login)
 
-**API Swagger:** [https://docs.openlattice.com/#/](https://docs.openlattice.com/#/)
+**API Swagger:** [https://docs.openlattice.com](https://docs.openlattice.com/#/)
 
-**Knowledge base:** [https://help.openlattice.com/](https://help.openlattice.com/)
+**Knowledge base:** [https://help.openlattice.com](https://help.openlattice.com/)
 
 **Description:** cloud based multitenant platform deployed to AWS Gov Cloud. Intended to be used by local government entities for data collection and analytics.
 
