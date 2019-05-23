@@ -4,7 +4,7 @@
 
 **CEO:** Matthew Tamayo-Rios, [https://www.linkedin.com/in/matthewtrios/](https://www.linkedin.com/in/matthewtrios/)
 
-**Size:** 10 employees
+**Size:** 10-15 employees
 
 **Description:** OpenLattice enables organizations to deploy data-driven workflows against data integrated across silos such as law enforcement, emergency medical services, mental health, behavioral health, and homeless management information systems into a standard data model. Building a platform that provides storage, compute, privacy, security, and compliance features necessary to support the operational workflows that help people get their assistance they need.
 
