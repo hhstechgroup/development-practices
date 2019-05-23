@@ -19,7 +19,7 @@
 
 **Pricing:** free for core services
 
-**GitHub:** [https://github.com/openlattice?type=source](https://github.com/openlattice?type=source)
+**GitHub:** [https://github.com/openlattice](https://github.com/openlattice?type=source)
 
 **Code age:** around 1 year
 
