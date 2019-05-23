@@ -63,5 +63,7 @@ Entity Data Model (EDM) used to describe OData Services. EDM modeling tools avai
 - Complex Types supported
 
 **URI Components**
+
 ![](https://github.com/ca-cwds/development-practices/blob/master/images/openlattice/OData_URL.png)
+
 REST OData protocol supports aggregation, sorting, pagination, change sets (transactions), etc.
