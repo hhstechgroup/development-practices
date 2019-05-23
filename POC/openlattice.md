@@ -43,7 +43,7 @@
 
 # OpenLattice technologies and architecture
 ![](https://github.com/ca-cwds/development-practices/blob/master/images/openlattice/openlattice_architecture.png)
-
+Diagram based on review of public GitHub repositories of OpenLattice Platform
 
 ## EDM
 The concepts of an EDM are abstract ideas of entities (objects or nodes) and associations (relationships), constructed by properties. The 3 key concepts are:
